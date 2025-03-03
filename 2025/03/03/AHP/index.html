@@ -30,7 +30,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
 <meta property="article:published_time" content="2025-03-03T13:46:27.116Z">
-<meta property="article:modified_time" content="2025-03-03T16:08:37.443Z">
+<meta property="article:modified_time" content="2025-03-03T16:12:52.956Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/redefine-og.webp">
@@ -303,8 +303,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-03-04 00:08:37</span>
-            <span class="mobile">2025-03-04 00:08:37</span>
+            <span class="desktop">2025-03-04 00:12:52</span>
+            <span class="mobile">2025-03-04 00:12:52</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -331,8 +331,18 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<h1 id="适配器增强的分层跨模态预训练用于轻量级医学报告生"><a href="#适配器增强的分层跨模态预训练用于轻量级医学报告生" class="headerlink" title="适配器增强的分层跨模态预训练用于轻量级医学报告生"></a><strong>适配器增强的分层跨模态预训练用于轻量级医学报告生</strong></h1><p>论文成果请点击<a class="link"   target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10856362" >Adapter-Enhanced Hierarchical Cross-Modal Pre-training for Lightweight Medical Report Generation<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>。</p>
-<p>项目Code请点击<a class="link"   target="_blank" rel="noopener" href="https://github.com/OpenMICG/AHP" >AHP<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>。</p>
+			<h1 id="适配器增强的分层跨模态预训练用于轻量级医学报告生"><a href="#适配器增强的分层跨模态预训练用于轻量级医学报告生" class="headerlink" title="适配器增强的分层跨模态预训练用于轻量级医学报告生"></a><strong>适配器增强的分层跨模态预训练用于轻量级医学报告生</strong></h1>
+  <div class="note p-4 mb-4 rounded-small primary">
+    <p>论文成果请点击<a class="link"   target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10856362" >Adapter-Enhanced Hierarchical Cross-Modal Pre-training for Lightweight Medical Report Generation<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>。</p>
+
+  </div>
+
+
+  <div class="note p-4 mb-4 rounded-small primary">
+    <p>项目Code请点击<a class="link"   target="_blank" rel="noopener" href="https://github.com/OpenMICG/AHP" >AHP<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>。</p>
+
+  </div>
+
 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>医学影像在疾病诊断和治疗中至关重要。然而，医生在分析大量医学影像并撰写报告时，面临<strong>高负担和易出错</strong> 的挑战。自动医学报告生成技术可以提高效率，降低医生负担，同时提升报告的一致性和准确性。</p>
 <p>近年来，深度学习在医学报告生成任务中取得了显著进展。然而，<strong>现有模型主要基于 Transformer 编码器</strong>，仅能提取<strong>全局特征</strong>，忽略了局部结构信息，导致视觉空间细节表示不足。此外，大型预训练模型的参数过多，在小规模下游数据集上容易<strong>过拟合</strong>。</p>
 <p><img  
@@ -345,23 +355,17 @@
 
   <div class="note-large blue">
     <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
-      <p>提示</p>
+      <p>核心创新点</p>
 
     </div>
     <div class="notel-content">
-      <p>换行测试换行测试换行测试</p>
+      <p>采用<strong>空间适配器 (Spatial Adapter)</strong>，结合卷积特征和 Transformer，全局与局部信息融合。</p>
+<p><strong>跨模态预训练</strong>，在多数据集上进行视觉-文本对齐，提高泛化能力。</p>
+<p>仅<strong>微调轻量级适配器</strong> 即可在多个数据集上取得优异表现，减少参数量。</p>
 
     </div>
   </div>
 
-<blockquote>
-<p>核心创新点包括：</p>
-<blockquote>
-<p>采用<strong>空间适配器 (Spatial Adapter)</strong>，结合卷积特征和 Transformer，全局与局部信息融合。</p>
-<p><strong>跨模态预训练</strong>，在多数据集上进行视觉-文本对齐，提高泛化能力。</p>
-<p>仅<strong>微调轻量级适配器</strong> 即可在多个数据集上取得优异表现，减少参数量。</p>
-</blockquote>
-</blockquote>
 <p>实验表明，AHP 在 IU X-Ray、MIMIC-CXR 及膀胱病理数据集上达到了<strong>SOTA</strong> 水平，同时大幅减少模型参数。</p>
 <h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p><img  
                      lazyload
@@ -389,25 +393,25 @@
 <h2 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h2><h3 id="IU-X-RAY数据集NLP指标实验结果"><a href="#IU-X-RAY数据集NLP指标实验结果" class="headerlink" title="IU X-RAY数据集NLP指标实验结果"></a>IU X-RAY数据集NLP指标实验结果</h3><p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="C:\Users\Oneven\AppData\Roaming\Typora\typora-user-images\image-20250303234143544.png"
+                     data-src="/images/AHP/image-3.png"
                       alt="image-20250303234143544"
                 ></p>
 <h3 id="MIMIC-CXR数据集NLP指标实验结果"><a href="#MIMIC-CXR数据集NLP指标实验结果" class="headerlink" title="MIMIC-CXR数据集NLP指标实验结果"></a>MIMIC-CXR数据集NLP指标实验结果</h3><p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="C:\Users\Oneven\AppData\Roaming\Typora\typora-user-images\image-20250303234202553.png"
+                     data-src="/images/AHP/image-4.png"
                       alt="image-20250303234202553"
                 ></p>
 <h3 id="IU-X-RAY-和MIMIC-CXR数据集临床有效指标结果"><a href="#IU-X-RAY-和MIMIC-CXR数据集临床有效指标结果" class="headerlink" title="IU X-RAY 和MIMIC-CXR数据集临床有效指标结果"></a>IU X-RAY 和MIMIC-CXR数据集临床有效指标结果</h3><p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="C:\Users\Oneven\AppData\Roaming\Typora\typora-user-images\image-20250303234249788.png"
+                     data-src="/images/AHP/image-5.png"
                       alt="image-20250303234249788"
                 ></p>
 <h3 id="BLADDER-PATHOLOGY数据集NLP指标实验结果"><a href="#BLADDER-PATHOLOGY数据集NLP指标实验结果" class="headerlink" title="BLADDER PATHOLOGY数据集NLP指标实验结果"></a>BLADDER PATHOLOGY数据集NLP指标实验结果</h3><p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="C:\Users\Oneven\AppData\Roaming\Typora\typora-user-images\image-20250303234312377.png"
+                     data-src="/images/AHP/image-6.png"
                       alt="image-20250303234312377"
                 ></p>
 
@@ -424,7 +428,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2025-03-04 00:08:37
+                    :</strong> 2025-03-04 00:12:52
             </li>
         
         <li>
